@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class List extends Component {
   render() {
-    const { data, handleDel, handleEdit } = this.props;
+    const { dataList, handleDel, handleEdit } = this.props;
     return (
       <div>
         <h1 className="alert alert-secondary">Danh sách sinh viên</h1>
@@ -17,7 +17,7 @@ export default class List extends Component {
             </tr>
           </thead>
           <tbody>
-            {data.map(({ maSv, hoTen, sdt, email }, index) => {
+            {dataList.map(({ maSv, hoTen, sdt, email }, index) => {
               return (
                 <tr key={index}>
                   <td>{maSv}</td>

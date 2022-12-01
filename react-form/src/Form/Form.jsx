@@ -206,14 +206,12 @@ export default class Form extends Component {
   };
 
   search = (number) => {
-    console.log(number);
     let { arrStudent } = this.state;
 
     let arrSearch = arrStudent.filter((stu) =>
       stu.maSv.toString().startsWith(number)
     );
-    console.log("arrSearch", arrSearch);
-    console.log("arrStudent", arrStudent);
+
     this.setState({
       arrSearch,
     });
@@ -322,7 +320,7 @@ export default class Form extends Component {
         </form>
         <Search search={this.search} />
         <List
-          data={
+          dataList={
             this.state.arrSearch.length
               ? this.state.arrSearch
               : this.state.arrStudent
